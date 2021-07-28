@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.Object.is 判断两个值是否完全相等
+        // console.log(Object.is(120, 120)); //true
+        // console.log(Object.is(NaN,NaN)); //true
+        // console.log(NaN === NaN); //false
+
+        // 2.Object.assign 对象合并
+        let config1 = {
+            host: 'localhost',
+            prot: 3306,
+            user: 'root',
+            pass: 'root'
+        }
+
+        let config2 = {
+            host: 'http://atguigu.com',
+            prot: 4700,
+            user: 'liao',
+            pass: 'jiajia'
+        }
+        // console.log(Object.assign(config1, config2)); //Object.assign(旧内容,新内容)
+
+        //3.Object.setPrototypeof 设置原型对象
+        // Object.getPrototypeOf 获取原型对象
+
+        let scholl = {
+            name: '尚硅谷'
+        }
+        let cities = {
+            xiaoqu: ['北京', '上海', '深圳']
+        }
+        Object.setPrototypeOf(scholl, cities);
+        console.log(scholl);
+
+        console.log(Object.getPrototypeOf(scholl)); //get school --> cities  || get cities --> 底下的原型
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //生成器其实就是一个特殊的函数
+        //异步编程 纯回调函数 node fs ajax mongodb
+        //yield 函数代码的分隔符
+        function * gen() {
+            console.log('aaa');
+            yield '11111';
+            console.log('bbb');
+            yield '22222';
+            console.log('ccc');
+            yield '33333';
+        }
+
+        let iterator = gen();
+        console.log(iterator.next()); //11111 false
+        console.log(iterator.next()); //22222 false
+        console.log(iterator.next()); //33333 false
+        console.log(iterator.next()); //undefined true
+
+        //遍历
+        for(let v of gen()){
+            console.log(v);
+        }
+    </script>
+</body>
+
+</html>

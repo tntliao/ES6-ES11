@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let m = new Map();
+
+        //添加元素
+        m.set('name', '尚硅谷');
+        m.set('change', function () {
+            console.log('it can change me');
+        })
+        let ket = {
+            school: 'ATGUIGU'
+        }
+        m.set(ket, ['北京', '上海', '深圳']);
+        // console.log(m);
+
+        //size
+        // console.log(m.size);
+
+        //delete
+        m.delete(ket)
+
+        //get
+        // console.log(m.get('name'));
+
+        //clear
+        m.clear();
+        console.log(m);
+    </script>
+</body>
+
+</html>

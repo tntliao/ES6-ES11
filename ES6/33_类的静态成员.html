@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Phone() {
+
+        }
+        Phone.name = '手机';
+        Phone.change = function () {
+            console.log('我可以改变世界');
+        }
+        Phone.prototype.size = '5.5';
+
+        let nokia = new Phone();
+        console.log(nokia.name); //undefined
+        console.log(nokia.size); //5.5
+
+        class Ph{
+            static name = 'shouji';
+            static change = 'can i change world'
+        }
+        let mi = new Ph();
+        console.log(mi.name); //undefined
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            判断是否含有这个值
+                es6 includes
+                es5 indexOf
+         */
+
+        const name = ['jiajia', 'nana', 'pipi', 'nini'];
+        //判断
+        console.log(name.includes('jiajia')); //true
+        console.log(name.includes('uiui')); //false
+        console.log(name.indexOf('jiajia')); //0
+        console.log(name.indexOf('uiui')); //-1
+
+
+        /*
+            2 ** 10  2的十次方
+            10 ** 3  10的三次方
+         */
+
+        console.log(2 ** 10);
+        console.log(Math.pow(2, 10));
+    </script>
+</body>
+
+</html>

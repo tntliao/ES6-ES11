@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ES6允许按照一定模式从数组和对象中提取,对变量进行赋值,这被称为结构赋值
+        // 1.数组的结构
+        const number = ['11', '22', '33', '44'];
+        let [a, b, c, d] = number;
+        console.log(a, b, c, d); //11 22 33 44
+
+        //2.对象的解构
+        const jia = {
+            name: '廖家嘉',
+            age: 17,
+            skill: function () {
+                console.log('i can use html,css,js');
+            }
+        }
+
+        let { name, age, skill } = jia;
+        skill();
+
+        /* let { skill } = jia2;
+        skill(); */
+    </script>
+</body>
+
+</html>

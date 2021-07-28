@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //创建Symbol
+        let s = Symbol();
+        // console.log(s, typeof s);
+        let s2 = Symbol('sgg');
+        let s3 = Symbol('sgg');
+        console.log(s2 === s3); //false
+
+        //Symbol.for创建
+        let s4 = Symbol.for('sgg');
+        let s5 = Symbol.for('sgg');
+        console.log(s4 === s5); //true
+
+        //不能与其他数据进行运算
+        // let result = s + 100; //报错
+        // let result = s > 100; //报错
+        let result = s + s;  //报错
+
+        /*
+            number
+            string
+            array
+            object
+            undefined
+            null
+            symbol 
+         */
+    </script>
+</body>
+
+</html>

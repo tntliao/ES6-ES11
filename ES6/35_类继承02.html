@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* class Phone {
+            //构造方法
+            constructor(brand, price) {
+                this.brand = brand;
+                this.price = price;
+            }
+            //父类的成员属性
+            call() {
+                console.log('我可以打电话');
+            }
+        }
+
+        class SmartPhone extends Phone {
+            //构造方法
+            constructor(brand, price, color, size) {
+                super(brand, price); //Phone.call(this,brand,price)
+                this.color = color;
+                this.size = size
+            }
+            photo() {
+                console.log('拍照');
+            }
+            playGame() {
+                console.log('玩游戏');
+            }
+            call() {
+                console.log('可以视频通话'); //子类对父类的重写
+            }
+        }
+
+        let mi = new SmartPhone('mi', 1999, 'black', '4.7inch')
+        console.log(mi); */
+
+        class Phone {
+            constructor(brand, price) {
+                this.brand = brand;
+                this.price = price;
+            }
+
+            call() {
+                console.log('wokeyidadianhua');
+            }
+        }
+
+        class SmartPhone extends Phone {
+            constructor(brand, price, color, size) {
+                super(brand, price);
+                this.color = color;
+                this.size = size;
+            }
+
+            color() {
+                this.color = color;
+            }
+            size() {
+                this.size = size;
+            }
+        }
+
+        let mi = new SmartPhone('mi', '2999', 'white', '5.93inch');
+        console.log(mi);
+    </script>
+</body>
+
+</html>
